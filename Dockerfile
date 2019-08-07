@@ -9,6 +9,7 @@ FROM crosscompass/ihaskell-notebook
 #    pip install --no-cache notebook
 
 # create user with a home directory
+USER root
 ARG NB_USER
 ARG NB_UID
 ENV USER ${NB_USER}
@@ -20,3 +21,4 @@ RUN adduser --disabled-password \
     ${NB_USER}
 WORKDIR ${HOME}
 USER ${USER}
+# ENV JUPYTER_ENABLE_LAB=yes
