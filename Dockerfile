@@ -10,7 +10,7 @@ FROM crosscompass/ihaskell-notebook
 
 # create user with a home directory
 USER root
-ARG NB_USER
+ARG NB_USER kuto
 ARG NB_UID
 ENV USER ${NB_USER}
 ENV HOME /home/${NB_USER}
