@@ -9,16 +9,17 @@ FROM crosscompass/ihaskell-notebook
 #    pip install --no-cache notebook
 
 # create user with a home directory
-USER root
-ARG NB_USER=kuto
-ARG NB_UID
+# don't modify user: default is jovyan https://github.com/jupyter/docker-stacks/blob/master/base-notebook/Dockerfile
+# USER root
+# ARG NB_USER=kuto
+# ARG NB_UID
 ENV USER ${NB_USER}
-ENV HOME /home/${NB_USER}
+# ENV HOME /home/${NB_USER}
 
-RUN adduser --disabled-password \
-    --gecos "Default user" \
-    --uid ${NB_UID} \
-    ${NB_USER}
+# RUN adduser --disabled-password \
+#    --gecos "Default user" \
+#    --uid ${NB_UID} \
+#    ${NB_USER}
 WORKDIR ${HOME}
 USER ${USER}
 # ENV JUPYTER_ENABLE_LAB=yes
