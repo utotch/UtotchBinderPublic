@@ -1,9 +1,9 @@
 # ref: https://mybinder.readthedocs.io/en/latest/tutorials/dockerfile.html
 # ref: https://github.com/binder-examples/minimal-dockerfile/blob/master/Dockerfile
-# ref: https://hub.docker.com/r/vaibhavsagar/ihaskell/
+# ref: https://hub.docker.com/r/crosscompass/ihaskell-notebook
 
 # FROM python:3.7-slim
-FROM vaibhavsagar/ihaskell
+FROM crosscompass/ihaskell-notebook
 # install the notebook package
 # RUN pip install --no-cache --upgrade pip && \
 #    pip install --no-cache notebook
